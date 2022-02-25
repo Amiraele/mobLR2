@@ -1,0 +1,29 @@
+fun stepen5(x:Int):Boolean{
+    var x1 = x
+        while(x1>1)
+        {
+            if(x1%5!=0) {
+                return false
+            }
+            else{
+                x1 = x1 / 5
+            }
+        }
+        return true
+}
+
+fun main(){
+    println("введите n")
+    var n = readLine()!!.toInt()
+    val a: ArrayList<Int> = arrayListOf()
+    var k=0
+    for (i in 1..n){
+        a.add(i)
+        if (stepen5(i)==true){
+            k++
+        }
+    }
+    println(a.joinToString(separator = " "))
+    println("кол-во степеней пятерки(единицу считать за степень пятерки) = $k")
+
+}
