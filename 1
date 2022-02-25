@@ -1,0 +1,18 @@
+fun min(x:Int,y:Int):Int{
+    if (x<y){
+        return x
+    }
+    else{
+        return y
+    }
+}
+
+fun main(){
+    println("введите a")
+    var a = readLine()!!.toInt()
+    println("введите b")
+    var b = readLine()!!.toInt()
+    var z = min(a,3*b) * min(2*a-b,b)
+    println("z = $z")
+
+}
