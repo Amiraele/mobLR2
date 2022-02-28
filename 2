@@ -1,0 +1,28 @@
+
+import kotlin.math.pow
+import kotlin.math.sqrt
+
+fun Dlina(a1:Int,a2:Int,b1:Int,b2:Int):Double {
+    var x1 = a1.toDouble()
+    var y1 = a2.toDouble()
+    var x2 = b1.toDouble()
+    var y2 = b2.toDouble()
+
+    var d = sqrt((x1-x2).pow(2)+(y1-y2).pow(2))
+    return d
+}
+
+fun main()
+{
+    println("Координаты первой точки")
+    var x1:Int = readLine()!!.toInt()
+    var y1:Int = readLine()!!.toInt()
+    println("Координаты второй точки")
+    var x2:Int = readLine()!!.toInt()
+    var y2:Int = readLine()!!.toInt()
+    println("Координаты третьей точки")
+    var x3:Int = readLine()!!.toInt()
+    var y3:Int = readLine()!!.toInt()
+    var p = Dlina(x1,y1,x2,y2)+Dlina(x2,y2,x3,y3)+Dlina(x3,y3,x1,y1)
+    println(p)
+}
