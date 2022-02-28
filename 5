@@ -1,0 +1,32 @@
+
+fun evklid(a:Int, b:Int): Int {
+    var a1 = a
+    var b1 = b
+    var sum:Int
+
+    while (a1!=0 && b1!=0)
+    {
+        if (a1>b1)
+        {
+            println(a1)
+            a1 = a1 % b1
+        }
+        else b1 = b1 % a1
+    }
+    sum = a1 + b1
+    return sum
+}
+
+fun main()
+{
+    var a:Int = readLine()!!.toInt()
+    var b:Int = readLine()!!.toInt()
+    var NOD = evklid(a, b)
+
+    println("Наибольший общий делитель")
+    println(NOD)
+
+    var NOK = (a * b) / NOD
+    println("Наименьшее общее кратное")
+    println(NOK)
+}
