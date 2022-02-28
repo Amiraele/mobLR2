@@ -1,0 +1,16 @@
+
+fun sum(a:Int):Int {
+    var a1 = a
+    if (a1 == 0)
+    {
+        return 0
+    }
+    else return (a1%10 + sum (a1/ 10))
+}
+
+fun main()
+{
+    var a:Int = readLine()!!.toInt()
+    var summa = sum(a)
+    println(summa)
+}
